@@ -40,6 +40,11 @@ class EnvVariable {
   @IsOptional()
   @IsString()
   DB_CA_PATH?: string;
+
+  // --- anthropic ---
+  @IsString()
+  @IsNotEmpty()
+  ANTHROPIC_API_KEY: string;
 }
 
 export function validate(config: Record<string, unknown>) {
